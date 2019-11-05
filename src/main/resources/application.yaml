@@ -1,0 +1,6 @@
+test:
+  property: Sumant-InsideBoot
+
+remote:
+  host: localhost
+  port: 8080

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: springbootconfig
+data:
+  test.property: "Sumant-FromConfigMap"
+  remote.host: "springboot-apiserver-service.default.svc.cluster.local"
+  remote.port: "8080"

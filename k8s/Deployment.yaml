@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-config-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-config
+  template:
+    metadata:
+      name: spring-config-pod
+      labels:
+        app: spring-config
+    spec:
+      containers:
+        - name: spring-config
+          image: rana0203/springbootconfig:latest
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: springbootconfig
+
+
